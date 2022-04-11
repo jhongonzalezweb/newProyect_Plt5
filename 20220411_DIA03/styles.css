@@ -1,0 +1,30 @@
+body {
+    background-color: #0000FF;
+}
+
+.mascota {
+    font-size: 150%;
+    color: rgb(250, 235, 215);
+}
+
+.gato {
+    font-size: 250%;
+    color: blueviolet;
+}
+
+.perro {
+    font-size: 350%;
+    color: rgb(225, 11, 54);
+}
+
+#pinky {
+    color: #ee607c;
+    font-size: 150%;
+    font-style: italic;
+}
+
+#cerebro {
+    color: #c10b36;
+    font-size: 150%;
+    font-style: bold;
+}
