@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="clase5.css">
+</head>
+
+<body>
+
+    <h1 id="ejemplo">Hola plataforma 5 JS</h1>
+
+    <p> Clase numero 5, modulo 1</p>
+
+    <ul>
+        <li> <a href="#"></a>Clase Dia 1</li>
+        <li> <a href="#"></a>Clase Dia 2</li>
+        <li> <a href="#"></a>Clase Dia 3</li>
+    </ul>
+
+    <p>Yo soy un parrafo y no tengo un color predeterminado</p>
+
+    <div>
+        <p>
+            <span>
+                Yo tengo un color rojo
+            </span>
+        </p>
+    </div>
+
+    <!-- Formulario Web -->
+    <h1>Formulario</h1>
+    <form method="GET" action="otraPagina.html">
+        <p>Nombre</p>
+        <input class="nombreusuario" type="text" size="50" name="nombre" placeholder="Coloque su nombre y apellido">
+        <p>Año de Nacimiento</p>
+        <input type="text" name="fechanacimiento" min="1900" placeholder="Coloque su año de nacimiento">
+        <p>Genero</p>
+        <input type="radio" name="genero" value="h">Hombre
+        <input type="radio" name="genero" value="m">Mujer
+        <input type="radio" name="genero" value="o">Otro
+        <br>
+        <br>
+        <p>Usuario</p>
+        <input type="text" name="usuario" maxlength="=8">
+        <br>
+        <br>
+        <p>Password</p>
+        <input type="password" name="pass" minlength="=6">
+        <br>
+
+        <p>Seleccione sus intereses</p>
+        <input type="checkbox" name="pelicula">Peliculas
+        <input type="checkbox" name="deporte">Deportes
+        <input type="checkbox" name="videojuegos">Video Juegos
+
+        <br>
+        <br>
+        <p>Pais</p>
+        <select name="pais" id="pais">
+            <option>Seleccionar Pais</option>
+            <option value="cl">Chile</option>
+            <option value="ar">Argentina</option>
+            <option value="ve">Venezuela</option>
+            <option value="mx">Mexico</option>
+        </select>
+
+        <p>Seleccione gustos de peliculas</p>
+        <select multiple name="pais" id="pais">
+            <option value="cf">Ciencia ficcion</option>
+            <option value="dr">Drama</option>
+            <option value="mi">Misterio</option>
+            <option value="fa">Fantasia</option>
+            <option value="fw">Fartwest</option>
+        </select>
+
+        <br>
+        <br>
+        <input type="reset" value="Borrar">
+        <input type="submit" value="Enviar">
+
+        <p>Hablanos sobre ti</p>
+
+        <textarea name="textarea" id="" cols="100" rows="15">Escribe aqui sobre ti...</textarea>
+
+        <br>
+        <br>
+        <br>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251098.1980398495!2d-67.03045249602332!3d10.468361152250173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a58adcd824807%3A0x93dd2eae0a998483!2sCaracas%2C%20Distrito%20Capital%2C%20Venezuela!5e0!3m2!1ses!2scl!4v1649779130055!5m2!1ses!2scl"
+            width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+
+</html>
