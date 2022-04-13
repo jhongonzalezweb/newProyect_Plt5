@@ -1,0 +1,12 @@
+// Pasos a seguir de github
+
+1 - git init
+
+2 - git status
+
+3 - git add .
+
+4 - git commit -m "Mensaje"
+
+5 - git push -u origin main
+
