@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+    font-size: 40px;
+}
+
+.titulo {
+    color: rgb(0, 255, 76);
+    font-size: 50px;
+}
+
+#big {
+    color: rgb(122, 85, 182);
+    font-size: 60px;
+}
+
+.div1 {
+    background-color: aqua;
+}
+
+.div2 {
+    background-color: violet;
+}
+
+#pantuflas {
+    border: 5px solid red;
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin: 5px 10px 15px 20px;
+    padding: 5px 10px 15px 20px;
+
+}
