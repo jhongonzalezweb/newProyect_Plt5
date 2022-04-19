@@ -1,0 +1,73 @@
+body {
+    background: rgb(183, 227, 246);
+}
+
+h1 {
+    margin: 10px;
+    padding: 10px;
+    color: rgb(12, 12, 103);
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Lobster', cursive;
+    
+}
+
+h1:hover {
+    text-transform: uppercase;
+    color: rgb(10, 20, 122);
+
+}
+
+#carrocel {
+    border-radius: 10px;   
+}
+
+#img-grid {
+    border-radius: 10px;
+    width: 100%;
+}
+
+h2 {
+    padding-top: 10%;
+    color: rgb(12, 12, 103);
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    
+}
+
+p {
+    color: rgb(12, 12, 103);
+    text-align: justify;
+
+}
+
+#contenetor {
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 5%;
+
+}
+
+.botonesmios {
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    background: #0095f6;
+    color: white;
+    border-radius: 10px;
+    margin-top: 2.5%;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.4);
+    border-right: 5px solid rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+    color: #0095f6;
+    text-align: right;
+}
+
+.itemsito {
+    color: blue;
+}
+
+.aitemsito {
+    text-decoration: none;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- liks de bootstrap -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- link de fonts google -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- linkeados de estilos -->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Viaje turismo</title>
+
+</head>
+
+<body>
+  <!-- Content here -->
+
+  <div class="container">
+    <!-- Content here -->
+
+    <!-- Inicio navbar -->
+    <div id="navegation">
+      <nav style=" background-color: darkgreen; font-size: 110%; font-weight: bold;" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img style="width:100px" src="img/logo.png" alt="Logo Choroni">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul style="margin-left: 60%;" class="navbar-nav">
+              <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li> -->
+              <li class="nav-item">
+                <a style=" color: white" class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a style=" color: white" class="nav-link" href="noticias.html" target="_blank">Noticias</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a style=" color: white" class="nav-link" href="contacto.html">Contacto</a>
+              </li> -->
+              <li class="nav-item">
+                <a style=" color: white" class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Proximamente...</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Fin navbar -->
+
+    <!-- <section telefonos utiles> = "sección de teléfonos útiles, direcciones y un mapa de la ciudad"-->
+    <section>
+
+      <!-- grid -->
+
+      <div style="margin-top: 10%; margin-bottom: 10%;" class="container">
+        <div class="row">
+          <div class="col">
+            <!-- 1 of 2
+                  columna 1 -->
+
+            <!-- ubicacion -->
+
+            <div class="container">
+
+              <div id="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31384.601220514887!2d-67.62290972998022!3d10.494741920826515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e81cd351f718325%3A0xff014329bb45a70c!2sPlaya%20Grande!5e0!3m2!1ses!2scl!4v1650377075517!5m2!1ses!2scl"
+                width="600" height="450" style="border:0; border-radius: 10%; box-shadow: 0 10px 20px rgba(0,0,0,0.5)" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+          </div>
+          <div class="col">
+            <!-- 2 of 2
+                  columna 2 -->
+
+            <h3>Telefonos Utiles</h3>
+            <p>4890 | Policia</p>
+            <p>4456 | Bomberos</p>
+            <p>4125 | Defensa civil</p>
+            <p>4852 | Ambulancia</p>
+            <br>
+            <hr>
+            <br>
+            <h3>Direcciones a visitar</h3>
+            
+            <ul id="cor">
+              <li class="itemsito"><a class="aitemsito" href="https://www.google.com/search?q=playa+grande+choroni&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiT7M_506D3AhX_ILkGHY_OBaYQ_AUoAXoECAIQAw&biw=1920&bih=872&dpr=1" target="_blank"><p> Playa Grande</p></a> </li>
+              
+              <li class="itemsito"> <a class="aitemsito" href="https://www.google.com/search?q=playa+malecon+choroni&tbm=isch&ved=2ahUKEwiPzdG21KD3AhVzSbgEHa2jC5QQ2-cCegQIABAA&oq=playa+malecon+choroni&gs_lcp=CgNpbWcQA1DyAVjyAWC-B2gAcAB4AIABJIgBQ5IBATKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=cPJeYo_VG_OS4dUPrceuoAk&bih=872&biw=1920" target="_blank"><p>Playa Malecon</p></a></li>
+
+              <li class="itemsito"> <a class="aitemsito" href="https://www.google.com/search?q=choroni+pueblo&tbm=isch&hl=es&sa=X&ved=2ahUKEwjriNzR1KD3AhX-hZUCHTeSAvMQrNwCKAB6BQgBENYB&biw=1903&bih=872" target="_blank"><p>Pueblo de choroni</p></a></li>
+
+              <li class="itemsito"> <a class="aitemsito" href="https://www.google.com/search?q=choroni+rio&tbm=isch&ved=2ahUKEwij6cjc1KD3AhXArJUCHX0IDN0Q2-cCegQIABAA&oq=choroni+rio&gs_lcp=CgNpbWcQAzIFCAAQgAQyBggAEAgQHjIGCAAQCBAeOgQIABBDOgYIABAHEB46BggAEAUQHjoECAAQGFDd3QJYjOACYIfnAmgAcAB4AIABX4gB7AGSAQE1mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=wPJeYqMJwNnWxA_9kLDoDQ&bih=872&biw=1903&hl=es" target="_blank"><p>Rio las tres venas</p></a></li>
+
+            </ul>
+          </div>
+        </div>
+
+
+    </section>
+    <!-- < fin section telefonos utiles> -->
+
+
+    <!-- <section form> -->
+    <section>
+
+      <!-- form -->
+
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Primer nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Bob" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Segundo nombre</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Esponja" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+        
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+            <option>Maracay</option>
+            <option id="ccs">Caracas</option>
+            <option>Valencia</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto los terminos
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="botonesmios" type="submit">Submit form</button>
+        </div>
+      </form>
+
+    </section>
+    <!-- <fin section form> -->
+
+
+      <br>
+      <br>
+      <br>
+  
+    <!-- footer -->
+
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1"></span>
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+              <!-- 1 of 3 -->
+            </div>
+            <div id="miNombre" class="col-md-auto">
+              <p style="color: aliceblue;"> 2022 / Jhon Gonzalez </p>
+            </div>
+            <div class="col col-lg-2">
+              <!-- 3 of 3 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- fin footer -->
+
+    <!-- Fin Container -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
