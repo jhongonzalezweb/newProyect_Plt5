@@ -1,0 +1,18 @@
+body {
+    background-color: #e6e6e6;
+}
+
+.cambiarcolorfondo {
+    background-color: #00ff2a;
+    color: red;
+    text-align: right;
+}
+
+.segunda {
+    background-color: #2442a1;
+    color: verde;
+}
+
+.listaOrdenada {
+    color: green;
+}
