@@ -1,0 +1,27 @@
+const alumno = {
+    nombre: 'Rodrigo',
+    apellido: 'Silva',
+    saludar() {
+        console.log(`Mi nombre es ${this.nombre}`);
+    },
+    yoProgramo(lenguaje) {
+        console.log(`${this.nombre} programa en ${lenguaje}`);
+    }
+};
+
+const alumnoDos = {
+    nombre: "Milford"
+}
+
+const alumnoTres = {
+    nombre: "María Ignacia"
+}
+
+alumno.saludar();
+alumno.yoProgramo("JS");
+
+alumno.saludar.call(alumnoDos);
+alumno.saludar.call(alumnoTres);
+
+alumno.yoProgramo.call(alumnoDos, "JAVA");
+alumno.yoProgramo.apply(alumnoDos, ['React']);
