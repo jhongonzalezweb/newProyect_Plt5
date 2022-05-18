@@ -22,6 +22,17 @@ class Estudiante extends Persona {
 
     }
 
+    #tipoDeEstudiante = "";
+
+    set setTipoDeEstudiante(tipoP) {
+        this.#tipoDeEstudiante = tipoP;
+    }
+
+    get getTipoDeEstudiante() {
+        return this.tipoDeEstudiante;
+    }
+
+
     set setNotas(notaP2) {
         this.notas.push(notaP2)
     }
@@ -52,15 +63,22 @@ class Estudiante extends Persona {
 
 var ejemploEstudiante = new Estudiante("Rodrigo", 32, [6,7,5]);
 
+ejemploEstudiante.notas = [7,7,7];
+ejemploEstudiante.tipoDeEstudiante = "tessnico"
+
+console.log(ejemploEstudiante);
+
+
+
 //console.log(ejemploEstudiante);
 
-ejemploEstudiante.setNotas = 4;
+//ejemploEstudiante.setNotas = 4;
 
 //console.log(ejemploEstudiante);
 
 //console.log(ejemploEstudiante.getNotas);
 
-console.log(ejemploEstudiante.promedio());
+//console.log(ejemploEstudiante.promedio());
 
 /*
 console.log(ejemploEstudiante);
