@@ -24,7 +24,8 @@ $(document).ready( function() {
     };
     $.ajax({
         type: "GET",
-        url: "https://api.covidtracking.com/v1/us/daily.json",
+        //url: "https://api.covidtracking.com/v1/us/daily.json",
+        url: "http://localhost:3000/covid",
         dataType: "json",
         success: function(datos) {
             console.log(datos);
