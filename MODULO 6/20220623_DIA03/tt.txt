@@ -1,0 +1,15 @@
+[
+  { id: 1, nombre: 'Tarapaca' },
+  { id: 2, nombre: 'Iqique' },
+  { id: 3, nombre: 'Atacama' },
+  { id: 4, nombre: 'Coquimbo' },
+  { id: 5, nombre: 'Valparaiso' },
+  { id: 6, nombre: 'OHiggins' },
+  { id: 7, nombre: 'El Maule' },
+  { id: 8, nombre: 'El Bio Bio' },
+  { id: 9, nombre: 'Macul' },
+  { id: 10, nombre: 'Maritimas atlanticas' },
+  { id: 11, nombre: 'Cerca' },
+  { id: 12, nombre: 'Adelante' },
+  { id: 13, nombre: 'Gracias' }
+]
