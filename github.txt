@@ -1,12 +1,10 @@
-// Pasos a seguir de github
+git init
 
-1 - git init
+git add .
 
-2 - git status
+git commit -m "first commit"
 
-3 - git add .
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
 
-4 - git commit -m "Mensaje"
-
-5 - git push -u origin main
+git push -u origin master
 
