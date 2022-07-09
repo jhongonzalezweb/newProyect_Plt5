@@ -1,0 +1,24 @@
+// Editar una Región en la BBDD
+app.get('/editarNombreRegionAction/', (req, res) => {
+
+    const host = "localhost";
+    let miURL = new URL(`http://${host}:${req.url}`);
+    const parametros = miURL.searchParams.values;
+
+    let idRegion = 0;
+
+    miURL.searchParams.forEach((id, nombre) => {
+
+        idRegion = id;
+        console.log(`-===== ${nombre} =====-`);
+        console.log(`-===== ${id} =====-`);
+
+    });
+
+    idRegion = parseInt(idRegion);
+
+    let paginaExito = '<!DOCTYPE html><html><head></head><body>';
+    paginaExito += '<h4> Editar Region: </h4>';
+    paginaExito += '</br>';
+    paginaExito += '  <form action="editarNombreRegionAction" method="post">';
+

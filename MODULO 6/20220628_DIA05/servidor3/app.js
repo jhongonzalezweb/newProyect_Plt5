@@ -10,6 +10,8 @@ app.use(express.static(__dirname + '/public'));
 //extended: false significa que se parse solo string no archivos de imagenes por 
 app.use(bodyParser.urlencoded({ extended: false }))
 
+/**Enrutamiento */
+
 // mostrar paginas con numeros y links para mostrar tablas posteriormente
 app.post('/mostrarnumeros', (req, res) => {
 
@@ -46,4 +48,3 @@ app.get('/mostrartabla', (req, res) =>
 var server = app.listen(8080, () => {
     console.log("Servidor web iniciado");
 });
-
