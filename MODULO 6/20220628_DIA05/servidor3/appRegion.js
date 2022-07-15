@@ -53,18 +53,7 @@ app.post('/ingresarRegionAction', (req, res) => {
 
     res.send(paginaExito)
 
-    /*
-    let pagina = '<!doctype html><html><head></head><body>';
-    for (let x = 1; x <= 10; x++) {
-        let tabla = num * x;
-        pagina += `${num} * ${x} = ${tabla} <br>`;
-    }
-    pagina += '<a href="index.html">Retornar</a>';
-    pagina += '</body></html>';
-    res.send(pagina);
-    */
 });
-
 
 // Mostrar las regiones de la base de datos
 
@@ -152,10 +141,90 @@ app.get('/eliminarRegionAction/', (req, res) => {
 });
 
 
+// Editar una Región en la BBDD
+app.get('/editarRegionAction/', (req, res) => {
 
+    const host = "localhost";
+    let miURL = new URL(`http://${host}:${req.url}`);
+    const parametros = miURL.searchParams.values;
+
+    let idRegion = 0;
+
+    miURL.searchParams.forEach((id, nombre) => {
+
+        idRegion = id;
+        console.log(`-===== ${nombre} =====-`);
+        console.log(`-===== ${id} =====-`);
+
+    });
+    
+    idRegion = parseInt(idRegion);
+
+    let paginaExito = '<!DOCTYPE html><html><head></head><body>';
+    paginaExito += '<h4> Editar Region: </h4>';
+    paginaExito += '</br>';
+    paginaExito += '  <form action="editarNombreRegionAction" method="post">';
+    paginaExito += 'Id de la Region: ' + idRegion;
+    paginaExito += '</br>';
+    paginaExito += 'Ingrese el nuevo nombre de la region';
+    paginaExito += '</br>';
+    paginaExito += '<input type="text" name="nuevoNombreRegion" size="50"><br>';
+    paginaExito += '</br>';
+    paginaExito += '<input type="submit" value="Modificar Region">';
+    paginaExito += '<input type="hidden" name="idRegion" value=' + idRegion + '>';
+    paginaExito += '</form>';
+    paginaExito += '</body>';
+    paginaExito += '</html>';
+    
+
+    res.send(paginaExito);
+    
+});
+
+// Editar una Región en la BBDD
+app.post('/editarNombreRegionAction/', (req, res) => {
+
+    let numRegion = req.body.idRegion;
+    let nomRegion = req.body.nuevoNombreRegion;
+    console.log(nomRegion);
+
+    numRegion = parseInt(numRegion);
+
+    const host = "localhost";
+    let miURL = new URL(`http://${host}:${req.url}`);
+    const parametros = miURL.searchParams.values;
+
+    let idRegion = 0;
+
+    miURL.searchParams.forEach((id, nombre) => {
+        idRegion = id;
+        console.log(`-===== ${nombre} =====-`);
+        console.log(`-===== ${id} =====-`);
+    });
+
+    idRegion = parseInt(idRegion);
+    let sqlUpdate = "update region set nombre='" + nomRegion + "' where id=" + numRegion + ";";
+    console.log(sqlUpdate);
+    const updateRegion = new Client(conectionPG);
+    updateRegion.connect();
+
+    updateRegion.query(sqlUpdate)
+        .then(respuesta => {
+            console.log("Se actualizó la Región");
+            updateRegion.end();
+        })
+        .catch(error => {
+            console.log("Hicimos la Morición");
+            ///console.log(error);
+            updateRegion.end();
+        });
+
+    res.redirect('mostarRegionesAction');
+});
 
 /**Inicio del servidor */
 
 var server = app.listen(8080, () => {
     console.log("Servidor web iniciado");
 });
+

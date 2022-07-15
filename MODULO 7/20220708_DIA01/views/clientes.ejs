@@ -1,0 +1,35 @@
+<%- include("template/cabecera", {tituloWeb: 'Página de Inicio Cliente'})  %>
+ 
+    <div class="container">
+ 
+        <table class="table">
+ 
+            <thead>
+                <th scope="col">ID</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">APELLIDO</th>
+                <th scope="col">ACCIÓN</th>
+            </thead>
+            <tbody>
+                <h2>Clientes</h2>
+ 
+                <div>
+                    <% if (arrayClientes.length>0) { %>
+                        <% arrayClientes.forEach( cliente => { %>
+                            <tr>
+                                <th>Id: <%= cliente.id %></th>
+                                <th>Nombre: <%= cliente.nombre %></th>
+                                <th>Apellido: <%= cliente.apellido %></th>
+                            </tr>
+                            
+                        <% }) %>
+                    <% } %>
+                </div>
+ 
+            </tbody>
+ 
+        </table>
+ 
+    </div>
+ 
+<%- include("template/footer") %>
