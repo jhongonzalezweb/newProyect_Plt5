@@ -1,0 +1,22 @@
+
+<%- include("template/cabecera", {tituloWeb: 'Página de Inicio Cliente' }) %>
+
+    <div class="container">
+
+        <h2>CRUD Clientes</h2>
+
+        <form action="agregarCliente" class="my-2" method="POST">
+
+            <input type="text" placeholder="Ingrese el nombre" class="form-control my2" name="nombre">
+            <br>
+            <input type="text" placeholder="Ingrese el apellido" class="form-control my2" name="apellido">
+
+            <br>
+
+            <button type="submit" class="btn btn-dark">Agregar Cliente</button>
+
+        </form>
+
+    </div>
+
+    <%- include("template/footer") %>

@@ -1,9 +1,23 @@
-<%- include("template/cabecera", {tituloWeb: 'Página de Inicio Cliente'})  %>
- 
+<%- include("template/cabecera", {tituloWeb: 'Página de Inicio Cliente' }) %>
+
     <div class="container">
- 
+
+        <h1>CRUD Clientes</h1>
+
+        <br>
+
+        <a class="btn btn-dark" href="clientes/crear" role="button"> Crear Nuevo Cliente </a>
+
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <h2>Clientes</h2>
+
         <table class="table">
- 
+
             <thead>
                 <th scope="col">ID</th>
                 <th scope="col">NOMBRE</th>
@@ -11,25 +25,30 @@
                 <th scope="col">ACCIÓN</th>
             </thead>
             <tbody>
-                <h2>Clientes</h2>
- 
+
                 <div>
                     <% if (arrayClientes.length>0) { %>
-                        <% arrayClientes.forEach( cliente => { %>
+                        <% arrayClientes.forEach( cliente=> { %>
                             <tr>
-                                <th>Id: <%= cliente.id %></th>
-                                <th>Nombre: <%= cliente.nombre %></th>
-                                <th>Apellido: <%= cliente.apellido %></th>
+                                <th>
+                                    <%= cliente.id %>
+                                </th>
+                                <th>
+                                    <%= cliente.nombre %>
+                                </th>
+                                <th>
+                                    <%= cliente.apellido %>
+                                </th>
                             </tr>
-                            
-                        <% }) %>
-                    <% } %>
+
+                            <% }) %>
+                                <% } %>
                 </div>
- 
+
             </tbody>
- 
+
         </table>
- 
+
     </div>
- 
-<%- include("template/footer") %>
+
+    <%- include("template/footer") %>   
