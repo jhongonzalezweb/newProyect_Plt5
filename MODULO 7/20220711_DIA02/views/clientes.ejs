@@ -44,7 +44,8 @@
                                         role="button">
                                         Modificar Cliente
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="" role="button">
+                                    <a class="btn btn-danger btn-sm" href="javascript:eliminar('<%= cliente.id %>');"
+                                        role="button">
                                         Eliminar Cliente
                                     </a>
                                 </th>
@@ -59,5 +60,21 @@
         </table>
 
     </div>
+
+    <script>
+        console.log("*************async function eliminar(paramID)*************")
+        async function eliminar(paramID) {
+            try {
+                const data = await fetch(`/clientes/${paramID}`, {
+                    method: 'delete'
+                });
+
+                window.location.href = '/clientes'
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+    </script>
 
     <%- include("template/footer") %>

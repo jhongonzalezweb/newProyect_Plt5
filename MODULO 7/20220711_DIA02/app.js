@@ -30,5 +30,5 @@ app.use('/proveedores', require('./router/ProveedoresRouter'))
 
 const PORT = 5050;
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT} \nhttp://localhost:5050/`);
 });
