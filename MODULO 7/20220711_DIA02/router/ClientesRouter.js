@@ -12,6 +12,7 @@ router.use(bodyParser.json())
 
 const Cliente = require('../models/cliente');
 
+// Ver todos los clientes
 router.get('/', async (request, response) => {
     try {
         const arrayClientesDBM = await Cliente.find();
@@ -35,7 +36,7 @@ router.get('/crear', (request, response) => {
 
 // Codigo para agregar cliente
 router.post('/agregarCliente', async (request, response) => {
- 
+    
     console.log("******************************** x ********************************");
     const body = request.body;
     console.log("body", body);
@@ -44,19 +45,52 @@ router.post('/agregarCliente', async (request, response) => {
     try {
         const clienteBD = new Cliente(body);
         await clienteBD.save();
-
+        
         response.redirect('/clientes')
- 
+        
     } catch (error) {
         console.log(error);
     }
-
+    
 })
 
 
+// Codigo para ver cliente( Para despues modificarlo)
+
+router.get('/verCliente/:id', async (request, response) => {
+    
+    const id = request.params.id;
+    const clienteBD = await Cliente.findOne({_id: id});
+    
+    response.render('editarCliente', {
+        
+        nombre: clienteBD.nombre,
+        apellido: clienteBD.apellido,
+        id: clienteBD.id
+        
+    });
+    
+})
 
 
+// Codigo para ver cliente( Para despues modificarlo)
 
+router.post('/verCliente/editarCliente' , async (request, response) => {
+
+    const body = request.body;
+    const id = request.body.id;
+
+    try {
+        const clienteBD = await Cliente.findByIdAndUpdate(
+            id, body, { userFindAndModify: false }
+        )
+
+        response.redirect('/clientes')
+
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 module.exports = router;
 

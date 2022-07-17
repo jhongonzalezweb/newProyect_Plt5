@@ -39,6 +39,15 @@
                                 <th>
                                     <%= cliente.apellido %>
                                 </th>
+                                <th>
+                                    <a class="btn btn-primary btn-sm" href="clientes/verCliente/<%= cliente.id %>"
+                                        role="button">
+                                        Modificar Cliente
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" href="" role="button">
+                                        Eliminar Cliente
+                                    </a>
+                                </th>
                             </tr>
 
                             <% }) %>
@@ -51,4 +60,4 @@
 
     </div>
 
-    <%- include("template/footer") %>   
+    <%- include("template/footer") %>
