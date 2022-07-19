@@ -1,4 +1,4 @@
-const { request } = require('express');
+
 const express = require('express');
 const router = express.Router();
 const bodyParser = require("body-parser");
@@ -27,20 +27,16 @@ router.get('/', async (request, response) => {
 });
 
 
-
 // Codigo para dirigir la accion a la pagina crear clientes
 router.get('/crear', (request, response) => {
     response.render('crear');
 })
 
-
 // Codigo para agregar cliente
 router.post('/agregarCliente', async (request, response) => {
 
-    console.log("******************************** x ********************************");
     const body = request.body;
     console.log("body", body);
-    console.log("******************************** x ********************************");
 
     try {
         const clienteBD = new Cliente(body);
@@ -96,10 +92,7 @@ router.post('/verCliente/editarCliente', async (request, response) => {
 
 router.delete('/:id', async (request, response) => {
 
-    console.log("*************async function eliminar(paramID)*************")
     const id = request.params.id;
-    console.log("************* (paramID) ", id)
-
 
     try {
         const clienteBD = await Cliente.findByIdAndDelete(
@@ -113,7 +106,6 @@ router.delete('/:id', async (request, response) => {
     }
 
 })
-
 
 module.exports = router;
 
