@@ -7,4 +7,3 @@ git commit -m "first commit"
 git remote add origin https://github.com/jhongonzalezweb/NOMBRE_PROYECTO.git
 
 git push -u origin master
-/*jhon*/
