@@ -4,6 +4,8 @@ git add .
 
 git commit -m "first commit"
 
-git remote add origin https://github.com/jhongonzalezweb/NOMBRE_PROYECTO.git
+git remote add origin https://github.com/jhongonzalezweb/packaje.git
 
-git push -u origin master
+git push -u origin main
+
+
